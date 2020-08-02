@@ -1,0 +1,7 @@
+<p>Student: {{ studentName }}</p>
+<img src="{{ studentPhoto }}" />
+<p>Student Updated: {{ studentUpdated.toLocaleDateString() }}</p>
+
+<button (click)="togglePhoto($event)">Toggle Photos</button>
+<br /><br />
+<img [src]="studentPhotos[photoIndex]" />

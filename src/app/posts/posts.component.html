@@ -1,0 +1,19 @@
+<h1>Live Posts</h1>
+
+<table class="table table-dark">
+  <tr>
+    <th>ID</th>
+    <th>User ID</th>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  <tr *ngFor="let post of posts">
+    <td>{{ post.id }}</td>
+    <td>{{ post.userId }}</td>
+    <!-- <td>{{ post.title }}</td> -->
+    <td>
+      <a [routerLink]="['/post', post.id]">{{ post.title }}</a>
+    </td>
+    <td (click)="goToPost(post.id)">{{ post.body }}</td>
+  </tr>
+</table>

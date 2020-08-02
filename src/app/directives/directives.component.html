@@ -1,0 +1,48 @@
+<h2>Directives Component</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>First Language</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.language }}</td>
+
+      <!-- <td *ngIf="user.active">Active</td>
+      <td *ngIf="!user.active">Inactive</td> -->
+
+      <!--<td [ngSwitch]="user.active">
+        <span *ngSwitchCase="true">Active</span>
+        <span *ngSwitchCase="false">Inactive</span>
+      </td>-->
+
+      <td>{{ user.active ? "Active" : "Inactive" }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<br />
+
+<h2>Post Pages</h2>
+<h3>
+  <a [routerLink]="['/posts']" [queryParams]="{ page: 1 }">➀</a>&nbsp;
+  <a [routerLink]="['/posts']" [queryParams]="{ page: 2 }">➁</a>&nbsp;
+  <a [routerLink]="['/posts']" [queryParams]="{ page: 3 }">➂</a>&nbsp;
+  <a [routerLink]="['/posts']" [queryParams]="{ page: 4 }">➃</a>&nbsp;
+  <a [routerLink]="['/posts']" [queryParams]="{ page: 5 }">➄</a>&nbsp;
+  <a [routerLink]="['/posts']" [queryParams]="{ page: 6 }">➅</a>&nbsp;
+  <a [routerLink]="['/posts']" [queryParams]="{ page: 7 }">➆</a>&nbsp;
+  <a [routerLink]="['/posts']" [queryParams]="{ page: 8 }">➇</a>&nbsp;
+  <a [routerLink]="['/posts']" [queryParams]="{ page: 9 }">➈</a>&nbsp;
+  <a [routerLink]="['/posts']" [queryParams]="{ page: 10 }">➉</a>&nbsp;
+</h3>

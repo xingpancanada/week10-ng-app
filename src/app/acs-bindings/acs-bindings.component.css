@@ -1,0 +1,9 @@
+table,
+td,
+th {
+  border: 1pt blue solid;
+}
+
+.table-warning {
+  background-color: yellow;
+}

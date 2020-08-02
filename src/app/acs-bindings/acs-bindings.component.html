@@ -1,0 +1,25 @@
+<h2>ACS (ATTRUBUTE, CLASS, STYLE) Component</h2>
+
+<table class="table">
+  <thead>
+    <tr [class.table-warning]="showWarning">
+      <th [attr.colspan]="headerSpan">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [class.table-warning]="!showWarning">
+      <td>Column 11</td>
+      <td>Column 12</td>
+    </tr>
+    <tr>
+      <td [style.background-color]="grayBackground">Column 21</td>
+      <td [style.background-color]="showBackground ? grayBackground : 'pink'">
+        Column 22
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<app-post></app-post>

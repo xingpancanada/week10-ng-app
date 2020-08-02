@@ -1,0 +1,5 @@
+<h2>Events Component</h2>
+<ol>
+  <li *ngFor="let m of eventMsgs">{{ m }}</li>
+</ol>
+<app-child (btnClicked)="logClick($event)"></app-child>
